@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#16213e"
+    android:padding="28dp">
+
+    <View
+        android:id="@+id/handleBar"
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:background="#444466"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtModalTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MangaShelf"
+        android:textColor="#e94560"
+        android:textSize="22sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/handleBar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtModalSub"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Your personal manga discovery app."
+        android:textColor="#aaaaaa"
+        android:textSize="13sp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintTop_toBottomOf="@id/txtModalTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtHomeIcon"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/txtModalSub"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtHomeTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@id/txtModalSub"
+        app:layout_constraintStart_toEndOf="@id/txtHomeIcon"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtHomeDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Browse manga titles, tap one to see its synopsis and visit its MyAnimeList page."
+        android:textColor="#aaaaaa"
+        android:textSize="13sp"
+        android:lineSpacingMultiplier="1.4"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@id/txtHomeTitle"
+        app:layout_constraintStart_toEndOf="@id/txtHomeIcon"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCollIcon"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:textColor="#e94560"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/txtHomeDesc"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCollTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Collection"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@id/txtHomeDesc"
+        app:layout_constraintStart_toEndOf="@id/txtCollIcon"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCollDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Titles you save appear here for quick access."
+        android:textColor="#aaaaaa"
+        android:textSize="13sp"
+        android:lineSpacingMultiplier="1.4"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@id/txtCollTitle"
+        app:layout_constraintStart_toEndOf="@id/txtCollIcon"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSettIcon"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/txtCollDesc"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSettTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@id/txtCollDesc"
+        app:layout_constraintStart_toEndOf="@id/txtSettIcon"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSettDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Adjust your reading preferences and manage your account."
+        android:textColor="#aaaaaa"
+        android:textSize="13sp"
+        android:lineSpacingMultiplier="1.4"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@id/txtSettTitle"
+        app:layout_constraintStart_toEndOf="@id/txtSettIcon"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnCloseModal"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="Got it"
+        android:textColor="#ffffff"
+        android:backgroundTint="#e94560"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@id/txtSettDesc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
