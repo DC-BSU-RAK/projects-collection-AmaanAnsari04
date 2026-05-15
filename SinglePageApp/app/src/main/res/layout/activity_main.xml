@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:scrollbars="none"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <Button
+            android:id="@+id/instructButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="!"
+            android:textColor="#5c3d8f"
+            android:textSize="20sp"
+            android:backgroundTint="#ffffff"
+            android:padding="0dp"
+            app:cornerRadius="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/abril_fatface"
+            android:lineSpacingMultiplier="1.1"
+            android:text="Find out what\nflower is for you?"
+            android:textAlignment="center"
+            android:textColor="#3d2166"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtLeafDivider1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/txtTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/section1Header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintTop_toBottomOf="@id/txtLeafDivider1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:text="1"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:fontFamily="@font/abril_fatface"
+                android:gravity="center"
+                android:background="@drawable/badge_purple" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pick your favourite "
+                        android:textColor="#2d1b4e"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/abril_fatface" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="colour"
+                        android:textColor="#8b5cf6"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/abril_fatface" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose the colour that speaks to you."
+                    android:textColor="#888888"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/colourCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_white"
+            android:padding="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/section1Header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <Button
+                android:id="@+id/redButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:text="Red"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:fontFamily="@font/abril_fatface"
+                android:background="@drawable/btn_red"
+                app:backgroundTint="@null"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/blueButton" />
+
+            <Button
+                android:id="@+id/blueButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:text="Blue"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:fontFamily="@font/abril_fatface"
+                android:background="@drawable/btn_blue"
+                app:backgroundTint="@null"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/redButton"
+                app:layout_constraintEnd_toStartOf="@id/yellowButton" />
+
+            <Button
+                android:id="@+id/yellowButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:text="Gold"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:fontFamily="@font/abril_fatface"
+                android:background="@drawable/btn_yellow"
+                app:backgroundTint="@null"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/blueButton"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <Button
+                android:id="@+id/purpleButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:text="Mauve"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:fontFamily="@font/abril_fatface"
+                android:background="@drawable/btn_purple"
+                app:backgroundTint="@null"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toBottomOf="@id/redButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/greenButton" />
+
+            <Button
+                android:id="@+id/greenButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:text="Green"
+                android:textColor="#ffffff"
+                android:textSize="15sp"
+                android:fontFamily="@font/abril_fatface"
+                android:background="@drawable/btn_green"
+                app:backgroundTint="@null"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toBottomOf="@id/blueButton"
+                app:layout_constraintStart_toEndOf="@id/purpleButton"
+                app:layout_constraintEnd_toStartOf="@id/whiteButton" />
+
+            <Button
+                android:id="@+id/whiteButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:text="White"
+                android:textColor="#555555"
+                android:textSize="15sp"
+                android:fontFamily="@font/abril_fatface"
+                android:background="@drawable/btn_white"
+                app:backgroundTint="@null"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/yellowButton"
+                app:layout_constraintStart_toEndOf="@id/greenButton"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/section2Header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/colourCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/badge_purple"
+                android:fontFamily="@font/abril_fatface"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/abril_fatface"
+                        android:text="Pick your favourite "
+                        android:textColor="#2d1b4e"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/abril_fatface"
+                        android:text="season"
+                        android:textColor="#8b5cf6"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose the season that feels like you."
+                    android:textColor="#888888"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        >
+        <LinearLayout
+            android:id="@+id/seasonCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_white"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/section2Header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:id="@+id/autumnButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/btn_autumn"
+                android:padding="8dp"
+                android:layout_marginEnd="6dp">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/educational_seasons_flash_card"
+                    android:scaleType="fitCenter" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/winterButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/btn_winter"
+                android:padding="8dp"
+                android:layout_marginEnd="6dp">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/educational_seasons_flash_card__1_"
+                    android:scaleType="fitCenter" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/summerButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/btn_summer"
+                android:padding="8dp"
+                android:layout_marginEnd="6dp">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/educational_seasons_flash_card__3_"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/springButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/btn_spring"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/educational_seasons_flash_card__2_"
+                    android:scaleType="fitCenter" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/resultButton"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="24dp"
+            android:backgroundTint="#7c4dcc"
+            android:fontFamily="@font/abril_fatface"
+            android:text="Find out your flower!"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            app:cornerRadius="32dp"
+            app:layout_constraintTop_toBottomOf="@id/seasonCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
